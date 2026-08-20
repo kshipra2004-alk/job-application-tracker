@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack - Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>JobTrack</h1>
+        <p>Track your job applications easily</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Applications</h3>
+                <p id="totalJobs">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Interviews</h3>
+                <p id="interviews">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Selected</h3>
+                <p id="selected">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Rejected</h3>
+                <p id="rejected">0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add Job Application</h2>
+
+            <form id="jobForm">
+
+                <input type="text" id="company" placeholder="Company Name" required>
+
+                <input type="text" id="role" placeholder="Job Role" required>
+
+                <input type="text" id="location" placeholder="Location" required>
+
+                <input type="date" id="date" required>
+
+                <select id="status">
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <button type="submit">Add Application</button>
+
+            </form>
+        </section>
+
+        <section class="jobs-section">
+
+            <div class="top-bar">
+                <h2>My Applications</h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search company..."
+                >
+            </div>
+
+            <div id="jobList"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
